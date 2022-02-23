@@ -1,5 +1,5 @@
 class Contact {
-  constructor(name, phone, id) {
+  constructor(name, phone) {
     this.name = name;
     this.phone = phone;
     this.id = id;
@@ -37,15 +37,10 @@ const createContact = () => {
   if (numberFound)
     return alert(`O número ${contact.phone} já consta na lista de contatos.`);
 
-  for (let index = 10; index < contactList.length; index++) {
-    contact.id = contactList[index];
-  }
-
   contactList.push(contact);
 
   createList(contact.name, contact.phone);
 
-  console.log(contact);
   document.getElementById('name').value = '';
   document.getElementById('phone').value = '';
 };
