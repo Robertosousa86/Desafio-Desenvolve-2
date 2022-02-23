@@ -1,12 +1,12 @@
-html,
 body {
   background-image: url('../images/kanban-board-examples-2.png');
+  background-repeat: no-repeat;
   align-items: center;
   justify-content: center;
   display: flex;
   height: 100vh;
 }
-/* criar hover para deixar os forms sem opacidade */
+
 .form {
   opacity: 0.9;
   background-color: #face0a;
@@ -29,41 +29,32 @@ body {
 
 .contacts {
   opacity: 0.9;
+  font-size: 12px;
   background-color: #1ed08c;
   box-sizing: border-box;
   height: 400px;
   width: 320px;
   padding: 20px;
   margin-left: 40px;
+  text-transform: capitalize;
   transform: rotate(-4deg);
   transition: 0.9s;
 }
 
+.contacts > ul {
+  list-style-type: symbols('✓');
+}
+
+.contacts > li {
+  display: inline;
+}
+
 .contacts:hover {
   opacity: 9;
+  font-size: 16px;
   transform: rotate(0deg);
   height: 410px;
-  width: 330px;
-  box-shadow: 12px 12px 9px;
-}
-
-.contacts-list {
-  opacity: 0.9;
-  background-color: #d6003d;
-  box-sizing: border-box;
-  height: 400px;
-  padding: 20px;
-  width: 320px;
-  margin-left: 40px;
-  transition: 0.9s;
-  transform: rotate(4deg);
-}
-
-.contacts-list:hover {
-  opacity: 9;
-  transform: rotate(0deg);
-  height: 410px;
-  width: 330px;
+  width: 340px;
   box-shadow: 12px 12px 9px;
 }
 
@@ -90,12 +81,11 @@ body {
 }
 
 .input {
-  font-family: 'Reenie Beanie';
   border: 0;
   border-bottom: 2px solid #000;
   background-color: #face0a;
   box-sizing: border-box;
-  font-size: 40px;
+  font-size: 25px;
   height: 100%;
   outline: 0;
   padding: 4px 20px 0;

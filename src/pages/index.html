@@ -23,23 +23,15 @@
       <label for="name" class="placeholder">Nome</label>
     </div>
     <div class="input-container ic2">
-      <input id="phone" name="phone" class="input" type="tel" placeholder=" " required />
+      <input id="phone" class="input" type="tel" data-js="input" placeholder="" required />
       <div class="cut cut-short"></div>
       <label for="phone" class="placeholder">Telefone</label>
     </div>
-    <button id="submit" type="text" class="submit">Salvar contato</button>
+    <button onclick="createContact()" type="button" class="submit">Salvar Contato</button>
   </form>
 
   <form id="contacts" class="contacts">
     <div class="title">Contatos:</div>
-  </form>
-
-  <form class="contacts-list">
-    <div class="title">Dados do Contato:</div>
-    <ul>
-      <li>Nome</li>
-      <li>Telefone</li>
-    </ul>
   </form>
 </body>
 
