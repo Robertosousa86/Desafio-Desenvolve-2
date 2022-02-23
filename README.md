@@ -10,8 +10,8 @@
 
 - [ ] Deve ter a opção do usuário deletar um registro da lista, então, para cada item da lista vai ter um botão de exclusão do registro;
 
-- [ ] Não pode haver números repetidos, caso o user tente inserir, o programa deve mostrar uma mensagem para o usuário;
+- [x] Não pode haver números repetidos, caso o user tente inserir, o programa deve mostrar uma mensagem para o usuário;
 
-- [ ] Só pode ter uma tela;
+- [x] Só pode ter uma tela;
 
-- [ ] Os registros inseridos devem ser salvos em uma variável no js.
+- [x] Os registros inseridos devem ser salvos em uma variável no js.
