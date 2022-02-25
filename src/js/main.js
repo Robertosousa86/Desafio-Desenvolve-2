@@ -1,11 +1,22 @@
 class Contact {
-  constructor(name, phone) {
+  constructor(name, phone, id) {
     this.name = name;
     this.phone = phone;
+    this.id = id;
   }
 }
 
 const contactList = [];
+
+let counter = 0;
+
+const createId = () => {
+  for (let index = 0; index < contactList.length; index++) {
+    counter = +contactList.length;
+  }
+
+  return counter;
+};
 
 const createList = (name, phone) => {
   const item = document.createElement('ul');
@@ -24,6 +35,7 @@ const createContact = () => {
 
   contact.name = document.getElementById('name').value;
   contact.phone = document.getElementById('phone').value;
+
   if (!contact.name || !contact.phone)
     return alert('Por favor, preencha todos os campos.');
 
@@ -35,6 +47,8 @@ const createContact = () => {
 
   if (numberFound)
     return alert(`O número ${contact.phone} já consta na lista de contatos.`);
+
+  contact.id = createId();
 
   contactList.push(contact);
 
