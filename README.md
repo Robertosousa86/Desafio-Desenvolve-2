@@ -2,7 +2,9 @@
 
 ## Sobre o desafio:
 
-- É preciso criar um formulário onde tenha um campo para nome e telefone (já com a mascara para telefone) debaixo deste formulário, deve ter uma lista dos registros que foram submetidos pelo formulário no seguinte padrão
+- Criar uma API para salvar os contatos, através de um CRUD;
+
+- É preciso criar um formulário onde tenha um campo para nome e telefone (já com a mascara para telefone) debaixo deste formulário, deve ter uma lista dos registros que foram submetidos pelo formulário no seguinte padrão:
 
 `Nome - Telefone`
 
@@ -10,8 +12,8 @@
 
 - [ ] Deve ter a opção do usuário deletar um registro da lista, então, para cada item da lista vai ter um botão de exclusão do registro;
 
-- [x] Não pode haver números repetidos, caso o user tente inserir, o programa deve mostrar uma mensagem para o usuário;
+- [] Não pode haver números repetidos, caso o user tente inserir, o programa deve mostrar uma mensagem para o usuário;
 
-- [x] Só pode ter uma tela;
+- [] Só pode ter uma tela;
 
-- [x] Os registros inseridos devem ser salvos em uma variável no js.
+- [] Os registros inseridos devem ser salvos em uma variável no js.
