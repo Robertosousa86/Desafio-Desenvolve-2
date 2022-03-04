@@ -9,5 +9,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  return console.log(`Server running at http://localhost:${PORT}`);
+  return console.log(`Server running at http://localhost:${PORT} 🚀`);
 });
