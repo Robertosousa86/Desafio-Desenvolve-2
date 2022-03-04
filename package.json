@@ -1,0 +1,24 @@
+{
+  "name": "desafio-desenvolve-2",
+  "version": "1.0.0",
+  "description": "Uma API para uma simples lista telefonica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robertosousa86/Desafio-Desenvolve-2.git"
+  },
+  "keywords": [
+    "Desenvolve",
+    "API",
+    "Node"
+  ],
+  "author": "Roberto Sousa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Robertosousa86/Desafio-Desenvolve-2/issues"
+  },
+  "homepage": "https://github.com/Robertosousa86/Desafio-Desenvolve-2#readme"
+}
