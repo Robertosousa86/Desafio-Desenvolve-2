@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/Robertosousa86/Desafio-Desenvolve-2#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "mongoose": "^6.2.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
