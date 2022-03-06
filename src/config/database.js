@@ -11,7 +11,7 @@ try {
         useUnifiedTopology: true,
       })
       .then(() => {
-        return console.info('Conectado ao banco de dados com sucesso! 🔌');
+        return console.info('Banco de dados conectado com sucesso! 🔌');
       });
 
   module.exports = {
