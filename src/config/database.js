@@ -10,8 +10,8 @@ try {
         useNewUrlParser: true,
         useUnifiedTopology: true,
       })
-      .then((data) => {
-        return console.log(data);
+      .then(() => {
+        return console.info('Conectado ao banco de dados com sucesso! 🔌');
       });
 
   module.exports = {
