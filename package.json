@@ -4,7 +4,7 @@
   "description": "Uma API para uma simples lista telefônica",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/app.js"
+    "dev": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
