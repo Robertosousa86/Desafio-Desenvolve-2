@@ -1,10 +1,16 @@
 const express = require('express');
+
 const database = require('./config/database');
+const routes = require('./routes');
 
 const app = express();
 
+app.use(express.json());
+
 // Configura o express e retornar uma nova instância da aplicação configurada.
 const configureExpress = () => {
+  app.use('/', routes);
+
   app.database = database;
 
   return app;
