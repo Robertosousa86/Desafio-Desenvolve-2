@@ -32,6 +32,19 @@ class ContactController {
       return res.send(err.message);
     }
   }
+
+  async getById(req, res) {
+    try {
+      const contact = await this.Contact.findById(req.params.id);
+
+      if (!contact)
+        return res.status(400).send({ message: 'Não há contato com esse id!' });
+
+      return res.send(contact);
+    } catch (err) {
+      return res.send(err.message);
+    }
+  }
 }
 
 module.exports = ContactController;
