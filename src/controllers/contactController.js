@@ -17,6 +17,21 @@ class ContactController {
       return res.status(400);
     }
   }
+
+  async get(req, res) {
+    try {
+      const contacts = await this.Contact.find({});
+
+      if (!contacts.length)
+        return res
+          .status(400)
+          .send({ message: 'A lista de contatos está vazia!' });
+
+      return res.send({ contacts });
+    } catch (err) {
+      return res.send(err.message);
+    }
+  }
 }
 
 module.exports = ContactController;
