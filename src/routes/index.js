@@ -1,10 +1,10 @@
 const express = require('express');
 
-const contactController = require('../controllers/contactController');
+const contactRouter = require('./contacts');
 
 const router = express.Router();
 
-router.use('/contact', contactController);
+router.use('/contact', contactRouter);
 
 router.get('/', (req, res) => {
   res.send({
