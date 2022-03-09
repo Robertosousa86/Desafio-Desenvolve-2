@@ -4,7 +4,7 @@ const schema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-    unique: true,
+    lowercase: true,
   },
   // telephone não é obrigatório porque tel fixo caiu em desuso.
   phoneNumbers: {
