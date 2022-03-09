@@ -8,5 +8,6 @@ const router = express.Router(Contact);
 const contactController = new ContactController(Contact);
 
 router.post('/', (req, res) => contactController.create(req, res));
+router.get('/', (req, res) => contactController.get(req, res));
 
 module.exports = router;
