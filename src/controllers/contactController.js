@@ -64,6 +64,22 @@ class ContactController {
       return res.send(err.message);
     }
   }
+
+  async remove(req, res) {
+    const contact = await this.Contact.findByIdAndRemove({
+      _id: req.params.id,
+    });
+
+    if (!contact)
+      return res
+        .status(400)
+        .send({ message: 'Não há contato cadastrado com esse id!' });
+
+    return res.status(200).send({ message: 'Contato deletado com sucesso!' });
+  }
+  catch(err) {
+    return res.send(err.message);
+  }
 }
 
 module.exports = ContactController;
