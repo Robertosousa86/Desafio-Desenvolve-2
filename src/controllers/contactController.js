@@ -45,6 +45,25 @@ class ContactController {
       return res.send(err.message);
     }
   }
+
+  async update(req, res) {
+    try {
+      const contact = await this.Contact.updateOne(
+        { _id: req.params.id },
+        req.body
+      );
+
+      if (!contact.matchedCount)
+        return res
+          .status(400)
+          .send({ message: 'Não há contato salvo com esse id!' });
+      res
+        .status(200)
+        .send({ message: 'Dados do contato atualizados com sucesso!' });
+    } catch (err) {
+      return res.send(err.message);
+    }
+  }
 }
 
 module.exports = ContactController;
