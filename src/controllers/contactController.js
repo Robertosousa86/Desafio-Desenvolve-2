@@ -7,8 +7,11 @@ class ContactController {
     try {
       const contact = new this.Contact(req.body);
 
-      if (await this.Contact.findOne({ name: req.body.name }))
-        return res.status(400).send({ Message: 'Contato já cadastrado.' });
+      if (await this.Contact.findOne({ name: contact.name }))
+        return res.status(400).send({ message: 'Contato já cadastrado.' });
+
+      if (await this.Contact.findOne({ telephone: contact.telephone }))
+        return res.status(400).send({ message: 'Telefone já cadastrado.' });
 
       await contact.save();
 
@@ -20,7 +23,7 @@ class ContactController {
 
   async get(req, res) {
     try {
-      const contacts = await this.Contact.find({});
+      const contacts = await this.Contact.find({}).exec();
 
       if (!contacts.length)
         return res
