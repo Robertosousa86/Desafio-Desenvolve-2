@@ -7,8 +7,13 @@ class ContactController {
     try {
       const contact = new this.Contact(req.body);
 
-      if (await this.Contact.findOne({ name: req.body.name }))
+      if (await this.Contact.findOne({ name: contact.name }))
         return res.status(400).send({ Message: 'Contato já cadastrado.' });
+
+      if (await this.Contact.findOne({ telephone: contact.telephone }))
+        return res
+          .status(400)
+          .send({ Message: 'Número de telefone já cadastrado.' });
 
       await contact.save();
 
