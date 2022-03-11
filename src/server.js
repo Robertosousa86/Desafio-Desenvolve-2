@@ -17,10 +17,10 @@ const PORT = process.env.HOST;
         server.close((err) => {
           if (err) {
             console.error(err);
-            process.exit(1);
+            return process.exit(1);
           }
-          app.database.connection.close(function () {
-            console.info('Database connection closed!');
+          app.database.connection.close(() => {
+            console.info('⛔ Conexão com o banco de dados fechada!');
             process.exit(0);
           });
         })
