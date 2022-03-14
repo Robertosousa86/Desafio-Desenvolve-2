@@ -6,7 +6,7 @@ class ContactController {
   async create(req, res) {
     try {
       const contact = new this.Contact(req.body);
-
+      // todas as condições devem ser feitas aqui? como por exemplo name vazio?
       if (await this.Contact.findOne({ name: contact.name }))
         return res.status(400).send({ Message: 'Contato já cadastrado.' });
 
@@ -18,8 +18,8 @@ class ContactController {
       await contact.save();
 
       return res.status(201).send({ contact });
-    } catch (error) {
-      return res.status(400);
+    } catch (err) {
+      return res.send(err.message);
     }
   }
 
@@ -32,7 +32,7 @@ class ContactController {
           .status(400)
           .send({ message: 'A lista de contatos está vazia!' });
 
-      return res.send({ contacts });
+      return res.status(200).send({ contacts });
     } catch (err) {
       return res.send(err.message);
     }
@@ -45,7 +45,7 @@ class ContactController {
       if (!contact)
         return res.status(400).send({ message: 'Não há contato com esse id!' });
 
-      return res.send(contact);
+      return res.status(200).send(contact);
     } catch (err) {
       return res.send(err.message);
     }
